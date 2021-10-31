@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -23,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         inputNim = findViewById(R.id.inputNim)
         inputKelas = findViewById(R.id.inputKelas)
 
-        val mahasiswaRepo = MahasiswaRepo()
-        val mahasiswaVM = MahasiswaViewModel(mahasiswaRepo)
+        val mahasiswaVM = ViewModelProvider(this).get(MahasiswaViewModel::class.java)
         rvMahasiswa.adapter = MahasiswaAdapter(mahasiswaVM.getMahasiswa())
         rvMahasiswa.layoutManager = LinearLayoutManager(this)
 

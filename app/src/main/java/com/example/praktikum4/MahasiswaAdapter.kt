@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MahasiswaAdapter(val mahasiswa: LiveData<List<MahasiswaModel>>) :
     RecyclerView.Adapter<MahasiswaAdapter.MahasiswaViewHolder>(){
+
     class MahasiswaViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val textNama: TextView = itemView.findViewById(R.id.textNama)
         val textNim: TextView = itemView.findViewById(R.id.textNim)

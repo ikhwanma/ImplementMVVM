@@ -8,14 +8,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMahasiswa"
-        android:layout_width="413dp"
+        android:layout_width="410dp"
         android:layout_height="472dp"
         android:layout_marginTop="7dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnInput"
-        tools:listitem="@layout/list_mahasiswa" />
+        tools:listitem="@layout/list_mahasiswa"
+        android:foregroundGravity="center"/>
 
     <EditText
         android:id="@+id/inputNama"
@@ -67,5 +68,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputNim" />
+
+    <ScrollView
+        android:layout_width="366dp"
+        android:layout_height="8dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="470dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

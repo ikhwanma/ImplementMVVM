@@ -4,7 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MahasiswaViewModel(val mahasiswaRepo: MahasiswaRepo): ViewModel() {
+class MahasiswaViewModel(val mahasiswaRepo: MahasiswaRepo = MahasiswaRepo()): ViewModel() {
+    var a = MutableLiveData<Int>()
     var mahasiswa = MutableLiveData<List<MahasiswaModel>>()
 
     fun addMahasiswa(mahasiswaModel: MahasiswaModel){
